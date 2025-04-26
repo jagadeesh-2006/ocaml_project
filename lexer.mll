@@ -30,6 +30,8 @@ rule token = parse
   | '*'             { TIMES }
   | var             { VAR (Lexing.lexeme lexbuf) }
   | eof             { EOF }
-
+  | "raise"         { RAISE }
+  | "try"           { TRY }
+  | "with"          { WITH }
 {
 }
